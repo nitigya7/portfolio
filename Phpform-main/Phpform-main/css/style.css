@@ -1,0 +1,453 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Petemoss&display=swap");
+
+* {
+  margin: 0px;
+  text-decoration: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  list-style: none;
+  font-family: "Raleway", sans-serif;
+}
+html,
+body {
+  font-size: 18px;
+  scroll-behavior: smooth;
+  background-color: #f8f8f8;
+  height: 100%;
+}
+/* classes used frequently */
+.fix-width {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 5px;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* contact */
+.contact {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.contact .contact-info {
+  width: 45%;
+  margin-top: 1.5rem;
+}
+.contact .contact-info form input,
+textarea {
+  width: 80%;
+  height: 38px;
+  outline: none;
+  font-size: 0.8rem;
+  margin-bottom: 0.9rem;
+  border: none;
+  box-shadow: 0px 10px 5px -6px rgb(204 204 204);
+  padding-left: 10px;
+}
+.contact .contact-info form textarea {
+  height: 91px;
+}
+.contact .contact-info form button {
+  padding: 13px 31px;
+  background-color: #fea700;
+  border: none;
+  border-radius: 21px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* removing the up down arrow from input type number */
+.contact-info input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.contact .contact-info .rounded {
+  background-color: #fea700;
+  border-bottom-right-radius: 71px;
+  border-top-left-radius: 71px;
+  padding: 61px 1%;
+  justify-content: space-evenly;
+  color: white;
+  box-shadow: 0px 10px 5px -6px rgb(204 204 204);
+  position: relative;
+  width: 93%;
+}
+.contact .contact-info .rounded::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-bottom-right-radius: 71px;
+  border-top-left-radius: 71px;
+  border: 1.1px solid #fea700;
+  top: -30px;
+  left: 6%;
+  z-index: -10;
+}
+.contact .contact-info .rounded .icon {
+  width: 19%;
+  text-align: end;
+}
+.contact .contact-info .rounded .icon i {
+  transform: rotate(-45deg);
+  font-size: 3rem;
+}
+.contact .contact-info .rounded .rounded-text {
+  width: 69%;
+}
+.contact .contact-info .rounded h1 {
+  font-size: 0.9rem;
+}
+.contact .contact-info .rounded a {
+  font-size: 1.8rem;
+  color: white;
+}
+.contact .contact-info p {
+  margin-top: 1rem;
+  color: #595959;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.contact .contact-info p span {
+  margin-top: 1rem;
+  color: #757474;
+  margin-left: 3%;
+  font-weight: 600;
+}
+/* click box */
+
+.click-box {
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  position: fixed;
+  top: 0%;
+  transform: scale(0);
+  /* backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); */
+}
+.blur-div {
+  filter: blur(20px) grayscale(20%);
+}
+
+.click-box .click-content {
+  padding: 5rem 0%;
+  flex-direction: column;
+  max-width: 550px;
+  width: 100%;
+  border-radius: 6px;
+  background-color: #303030;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.click-box .click-content button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 2rem;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+.click-box .click-content h1 {
+  color: white;
+  font-size: 2.2rem;
+}
+.click-box .click-content a {
+  color: #fea700;
+  font-size: 1.2rem;
+  margin-top: 6px;
+}
+.click-box .click-content p {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-top: 6px;
+}
+.add-me {
+  transform: scale(1);
+}
+/* footer */
+
+footer {
+  background-color: #303030;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: white;
+}
+footer .extra-width p {
+  padding-right: 4rem;
+}
+
+footer .footer-box {
+  width: 33%;
+}
+footer .footer-box h1 {
+  position: relative;
+  margin-bottom: 1.6rem;
+}
+footer .footer-box h1::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background-color: #fea700;
+  position: absolute;
+  bottom: -0.7rem;
+  left: 0px;
+}
+.flex-start {
+  align-items: flex-start;
+}
+footer .footer-box p {
+  font-size: 0.86rem;
+  line-height: 1.3rem;
+}
+
+footer .footer-box a {
+  color: white;
+  font-size: 0.86rem;
+  margin-top: 1rem;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+footer .footer-box .mail p {
+  margin-bottom: 5px;
+}
+footer .footer-box .mail a {
+  margin-top: 5px;
+  display: block;
+}
+footer .footer-box p a {
+  margin-top: 0px;
+  margin-left: 5px;
+}
+footer .footer-box a:hover {
+  color: #fea700;
+}
+footer .footer-contact a {
+  display: inline-block;
+}
+
+/* for submit.html */
+.master-container {
+  background-color: #303030;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.master-container h2 {
+  font-size: 1.3rem;
+  color: white;
+}
+.master-container a {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  color: white;
+}
+
+/* media query start here */
+@media (max-width: 881px) {
+  .contact .responsive-width {
+    width: 54%;
+  }
+  nav .top-contact {
+    width: 70%;
+  }
+}
+
+@media (max-width: 788px) {
+  html {
+    font-size: 16px;
+  }
+  .navigation {
+    padding-top: 4.5rem;
+  }
+  nav .top-contact {
+    width: 84%;
+  }
+  .about .about-img {
+    width: 63%;
+    margin: 0 auto;
+  }
+  .about .about-text {
+    width: 64%;
+    margin: 0px auto;
+    margin-top: 1rem;
+  }
+  .product-box {
+    width: 30%;
+  }
+  .responsive-product-box {
+    margin-right: auto;
+  }
+  .extra-margin {
+    margin-right: 5%;
+  }
+  .product-box h2 {
+    font-size: 0.7rem;
+  }
+  .product p {
+    font-size: 0.7rem;
+  }
+  footer .extra-width {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 658px) {
+  .menu {
+    display: block;
+    position: fixed;
+    right: 10px;
+    background: #f8f8f8;
+    z-index: 98;
+  }
+  .line {
+    stroke: #303030;
+  }
+  .navigation ul {
+    transition: 0.3s;
+    flex-direction: column;
+    position: fixed;
+    width: 350px;
+    height: 100vh;
+    background: #303030;
+    z-index: 98;
+    top: 0px;
+    left: -360px;
+    padding-top: 11%;
+    padding-bottom: 21%;
+    align-items: center;
+  }
+  .navigation .active-ul {
+    left: 0px;
+  }
+
+  nav .top-contact {
+    display: none;
+  }
+  .navigation {
+    padding-top: 1rem;
+  }
+  .about .about-img {
+    width: 80%;
+  }
+  .about .about-text {
+    width: 80%;
+  }
+  .marketing-material .marketing {
+    width: 48%;
+  }
+  .product p {
+    font-size: 1rem;
+  }
+  .sticker-box {
+    width: 48%;
+  }
+  .product-box {
+    width: 48%;
+  }
+  .product-box h2 {
+    font-size: 1rem;
+  }
+  .extra-margin {
+    margin-right: 0px;
+  }
+  .responsive-product-box {
+    margin-right: unset;
+  }
+  .product-last-section .last-img {
+    width: 48%;
+    margin-bottom: 1rem;
+  }
+  .contact .contact-info {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+  }
+  .contact .contact-info form input,
+  textarea {
+    width: 100%;
+  }
+  .contact .contact-info .rounded {
+    margin-top: 2rem;
+  }
+  footer .footer-box {
+    width: 42%;
+  }
+  footer .extra-width {
+    width: 100%;
+  }
+}
+
+@media (max-width: 516px) {
+  .navigation ul {
+    width: 240px;
+  }
+  .brand {
+    width: 25%;
+  }
+  .about .about-text h2 {
+    font-size: 1.3rem;
+  }
+  .about .about-text h1 {
+    font-size: 1.5rem;
+  }
+  .about .about-text .details {
+    line-height: 1.4rem;
+  }
+  .product h1 {
+    font-size: 1.2rem;
+  }
+  .marketing-material .marketing,
+  .sticker-box,
+  .product-box,
+  .product-last-section .last-img {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+  .contact .contact-info {
+    width: 100%;
+  }
+  .other-product h1 {
+    margin-bottom: 1rem;
+  }
+  .contact .contact-info .rounded a {
+    font-size: 1.2rem;
+  }
+  .hover-div {
+    width: 80%;
+    margin: 0 auto;
+  }
+  footer .footer-box {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .click-box .click-content h1 {
+    font-size: 1.6rem;
+  }
+  .click-box .click-content a {
+    font-size: 0.9rem;
+  }
+}
